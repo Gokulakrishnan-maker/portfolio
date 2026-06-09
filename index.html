@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Gokula Krishnan | Website Developer & SEO Expert</title>
+<title>Gokula Krishnan | React Developer | SEO Specialist | Google Ads Expert</title>
 
 <meta name="description" content="Professional Website Developer specializing in Taxi Booking Websites, SEO, Google Ads, Hosting and Lead Generation. Built 20+ Taxi Websites.">
 
@@ -14,6 +13,66 @@
 
 <link rel="stylesheet" href="project.css">
 <script defer src="script.js"></script>
+
+<style>
+  /* Hero Buttons */
+  .hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 24px 0 8px;
+  }
+  .btn-primary {
+    background: #2563eb;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #1d4ed8; }
+  .btn-secondary {
+    background: #25d366;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  .btn-secondary:hover { background: #1ebe5d; }
+
+  /* WhatsApp Floating Button */
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: #25d366;
+    color: #fff;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    box-shadow: 0 4px 18px rgba(37,211,102,0.45);
+    text-decoration: none;
+    z-index: 1000;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .whatsapp-btn:hover {
+    background: #1ebe5d;
+    transform: scale(1.08);
+  }
+</style>
 </head>
 
 <body>
@@ -27,26 +86,36 @@
 Website Developer • SEO Specialist • Google Ads Expert
 </p>
 
+<!-- Improvement 2: Call-to-Action Buttons -->
+<div class="hero-buttons">
+  <a href="#contact" class="btn-primary">Hire Me</a>
+  <a href="https://wa.me/917418428599" target="_blank" class="btn-secondary">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+  </a>
+</div>
+
+<!-- Improvement 1: Real achievement stats instead of "5+ Years Experience" -->
 <div class="hero-stats">
 <div>
 <h2>20+</h2>
-<p>Taxi Websites</p>
+<p>Taxi Websites Built</p>
 </div>
 
 <div>
 <h2>100+</h2>
-<p>Landing Pages</p>
+<p>SEO Route Pages</p>
 </div>
 
 <div>
-<h2>5+</h2>
-<p>Years Experience</p>
+<h2>1000+</h2>
+<p>Leads Generated</p>
 </div>
 </div>
 
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#services">Services</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -74,7 +143,6 @@ My focus is creating fast, mobile-friendly, SEO-optimized websites that help bus
 <h2>Skills</h2>
 
 <div class="skills-list">
-
 <div class="skill">React JS</div>
 <div class="skill">JavaScript</div>
 <div class="skill">HTML5</div>
@@ -87,11 +155,40 @@ My focus is creating fast, mobile-friendly, SEO-optimized websites that help bus
 <div class="skill">Domain Management</div>
 <div class="skill">GitHub</div>
 <div class="skill">Responsive Design</div>
-
 </div>
 
 </section>
 
+<!-- Improvement 4: Services Section -->
+<section id="services">
+<h2>Services</h2>
+
+<div class="projects-grid">
+
+  <div class="project">
+    <h3>Website Development</h3>
+    <p>Responsive websites using React, HTML, CSS and JavaScript.</p>
+  </div>
+
+  <div class="project">
+    <h3>SEO Optimization</h3>
+    <p>Technical SEO, Local SEO and Route Page SEO.</p>
+  </div>
+
+  <div class="project">
+    <h3>Google Ads</h3>
+    <p>Lead generation campaigns for local businesses.</p>
+  </div>
+
+  <div class="project">
+    <h3>Hosting Management</h3>
+    <p>Domain setup, SSL, deployment and maintenance.</p>
+  </div>
+
+</div>
+</section>
+
+<!-- Improvement 3: Real taxi website projects -->
 <section id="projects" class="projects">
 
 <h2>Featured Projects</h2>
@@ -99,31 +196,27 @@ My focus is creating fast, mobile-friendly, SEO-optimized websites that help bus
 <div class="projects-grid">
 
 <div class="project">
-<h3>Taxi Booking Websites</h3>
-<p>
-Designed and deployed 20+ taxi websites with dynamic fare calculators, route pages and WhatsApp booking systems.
-</p>
+  <h3>Care Drop Taxi</h3>
+  <p>
+    Taxi booking website with route pages,
+    fare calculator and SEO optimization.
+  </p>
 </div>
 
 <div class="project">
-<h3>Google Ads Campaigns</h3>
-<p>
-Created and optimized Google Ads campaigns for taxi businesses generating high-quality leads.
-</p>
+  <h3>Red Goo Taxi</h3>
+  <p>
+    One-way taxi platform with Google Ads
+    lead generation and WhatsApp booking.
+  </p>
 </div>
 
 <div class="project">
-<h3>SEO Optimization</h3>
-<p>
-Implemented technical SEO, route page optimization and local SEO strategies to improve search rankings.
-</p>
-</div>
-
-<div class="project">
-<h3>Hosting & Deployment</h3>
-<p>
-Managed hosting, SSL setup, domain configuration and website migrations.
-</p>
+  <h3>Oneway Drop Taxi 247</h3>
+  <p>
+    React-based taxi booking website with
+    dynamic fare calculation.
+  </p>
 </div>
 
 </div>
@@ -166,10 +259,17 @@ LinkedIn Profile
 <i class="fa-solid fa-arrow-up"></i>
 </button>
 
+<!-- Improvement 7: WhatsApp Floating Button -->
+<a href="https://wa.me/917418428599" class="whatsapp-btn" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Improvement 6: Better Footer -->
 <footer>
-<p>
-© 2026 Gokula Krishnan | Website Developer | SEO Specialist | Google Ads Expert
-</p>
+  <p>
+    Built with ❤️ by Gokula Krishnan |
+    React Developer • SEO Specialist • Google Ads Expert
+  </p>
 </footer>
 
 </body>
