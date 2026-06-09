@@ -6,24 +6,77 @@
   scroll-behavior: smooth;
 }
 
+/* ── Particle Canvas ── */
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
 /* ── Body Background ── */
 body {
   font-family: "Poppins", sans-serif;
-  background: #0f172a;
+  background: #0b1120;
   color: #f8fafc;
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
 }
 
+/* Floating gradient blob — top-left blue */
 body::before {
-  content: "";
+  content: '';
   position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(59,130,246,.25), transparent 30%),
-    radial-gradient(circle at 80% 80%, rgba(168,85,247,.25), transparent 30%);
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(59,130,246,.15);
+  filter: blur(120px);
+  top: -100px;
+  left: -100px;
   z-index: -1;
+  animation: float1 12s infinite ease-in-out;
+}
+
+/* Floating gradient blob — bottom-right purple */
+body::after {
+  content: '';
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: rgba(168,85,247,.15);
+  filter: blur(120px);
+  right: -100px;
+  bottom: -100px;
+  z-index: -1;
+  animation: float2 15s infinite ease-in-out;
+}
+
+@keyframes float1 {
+  0%,100% { transform: translate(0, 0); }
+  50%      { transform: translate(100px, 50px); }
+}
+
+@keyframes float2 {
+  0%,100% { transform: translate(0, 0); }
+  50%      { transform: translate(-120px, -60px); }
+}
+
+/* ── Mouse Glow ── */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(59,130,246,.25), transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  transition: left 0.05s, top 0.05s;
 }
 
 /* ── Hero Header ── */
