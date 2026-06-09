@@ -12,265 +12,171 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <link rel="stylesheet" href="project.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 <script defer src="script.js"></script>
-
-<style>
-  /* Hero Buttons */
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 24px 0 8px;
-  }
-  .btn-primary {
-    background: #2563eb;
-    color: #fff;
-    padding: 12px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: background 0.2s;
-  }
-  .btn-primary:hover { background: #1d4ed8; }
-  .btn-secondary {
-    background: #25d366;
-    color: #fff;
-    padding: 12px 32px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background 0.2s;
-  }
-  .btn-secondary:hover { background: #1ebe5d; }
-
-  /* WhatsApp Floating Button */
-  .whatsapp-btn {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    background: #25d366;
-    color: #fff;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    box-shadow: 0 4px 18px rgba(37,211,102,0.45);
-    text-decoration: none;
-    z-index: 1000;
-    transition: background 0.2s, transform 0.2s;
-  }
-  .whatsapp-btn:hover {
-    background: #1ebe5d;
-    transform: scale(1.08);
-  }
-</style>
 </head>
 
 <body>
 
+<canvas id="particles"></canvas>
+
 <header>
-<img src="gokul.jpg" alt="Gokula Krishnan" class="profile-img">
+  <img src="gokul.jpg" alt="Gokula Krishnan" class="profile-img">
 
-<h1>Gokula Krishnan</h1>
+  <h1>Gokula Krishnan</h1>
 
-<p class="subtitle">
-Website Developer • SEO Specialist • Google Ads Expert
-</p>
+  <!-- Typing animation subtitle -->
+  <p class="typing"></p>
 
-<!-- Improvement 2: Call-to-Action Buttons -->
-<div class="hero-buttons">
-  <a href="#contact" class="btn-primary">Hire Me</a>
-  <a href="https://wa.me/917418428599" target="_blank" class="btn-secondary">
-    <i class="fab fa-whatsapp"></i> WhatsApp
-  </a>
-</div>
+  <!-- CTA Buttons -->
+  <div class="hero-buttons">
+    <a href="#contact" class="btn-primary">Hire Me</a>
+    <a href="https://wa.me/917418428599" target="_blank" class="btn-secondary">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+  </div>
 
-<!-- Improvement 1: Real achievement stats instead of "5+ Years Experience" -->
-<div class="hero-stats">
-<div>
-<h2>20+</h2>
-<p>Taxi Websites Built</p>
-</div>
+  <!-- Achievement Stats -->
+  <div class="hero-stats">
+    <div>
+      <h2>20+</h2>
+      <p>Taxi Websites Built</p>
+    </div>
+    <div>
+      <h2>100+</h2>
+      <p>SEO Route Pages</p>
+    </div>
+    <div>
+      <h2>1000+</h2>
+      <p>Leads Generated</p>
+    </div>
+  </div>
 
-<div>
-<h2>100+</h2>
-<p>SEO Route Pages</p>
-</div>
-
-<div>
-<h2>1000+</h2>
-<p>Leads Generated</p>
-</div>
-</div>
-
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-</nav>
-
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section id="about" class="about">
-<h2>About Me</h2>
+<section id="about" class="about" data-aos="fade-up">
+  <h2>About Me</h2>
 
-<p>
-Hello, I'm <strong>Gokula Krishnan</strong>, a professional Website Developer specializing in Taxi Booking Websites, React Applications, SEO Optimization, Google Ads Campaigns, Hosting Management and Lead Generation.
-</p>
-
-<p>
-I have successfully built and managed more than 20 taxi booking websites with dynamic fare calculators, route pages, WhatsApp booking systems, online enquiry forms and Google Ads integrations.
-</p>
-
-<p>
-My focus is creating fast, mobile-friendly, SEO-optimized websites that help businesses generate more enquiries and conversions.
-</p>
-
-</section>
-
-<section id="skills" class="skills">
-<h2>Skills</h2>
-
-<div class="skills-list">
-<div class="skill">React JS</div>
-<div class="skill">JavaScript</div>
-<div class="skill">HTML5</div>
-<div class="skill">CSS3</div>
-<div class="skill">Python</div>
-<div class="skill">Firebase</div>
-<div class="skill">SEO</div>
-<div class="skill">Google Ads</div>
-<div class="skill">Website Hosting</div>
-<div class="skill">Domain Management</div>
-<div class="skill">GitHub</div>
-<div class="skill">Responsive Design</div>
-</div>
-
-</section>
-
-<!-- Improvement 4: Services Section -->
-<section id="services">
-<h2>Services</h2>
-
-<div class="projects-grid">
-
-  <div class="project">
-    <h3>Website Development</h3>
-    <p>Responsive websites using React, HTML, CSS and JavaScript.</p>
-  </div>
-
-  <div class="project">
-    <h3>SEO Optimization</h3>
-    <p>Technical SEO, Local SEO and Route Page SEO.</p>
-  </div>
-
-  <div class="project">
-    <h3>Google Ads</h3>
-    <p>Lead generation campaigns for local businesses.</p>
-  </div>
-
-  <div class="project">
-    <h3>Hosting Management</h3>
-    <p>Domain setup, SSL, deployment and maintenance.</p>
-  </div>
-
-</div>
-</section>
-
-<!-- Improvement 3: Real taxi website projects -->
-<section id="projects" class="projects">
-
-<h2>Featured Projects</h2>
-
-<div class="projects-grid">
-
-<div class="project">
-  <h3>Care Drop Taxi</h3>
   <p>
-    Taxi booking website with route pages,
-    fare calculator and SEO optimization.
+    Hello, I'm <strong>Gokula Krishnan</strong>, a professional Website Developer specializing in Taxi Booking Websites, React Applications, SEO Optimization, Google Ads Campaigns, Hosting Management and Lead Generation.
   </p>
-</div>
 
-<div class="project">
-  <h3>Red Goo Taxi</h3>
   <p>
-    One-way taxi platform with Google Ads
-    lead generation and WhatsApp booking.
+    I have successfully built and managed more than 20 taxi booking websites with dynamic fare calculators, route pages, WhatsApp booking systems, online enquiry forms and Google Ads integrations.
   </p>
-</div>
 
-<div class="project">
-  <h3>Oneway Drop Taxi 247</h3>
   <p>
-    React-based taxi booking website with
-    dynamic fare calculation.
+    My focus is creating fast, mobile-friendly, SEO-optimized websites that help businesses generate more enquiries and conversions.
   </p>
-</div>
-
-</div>
-
 </section>
 
-<section id="contact" class="contact">
+<section id="skills" class="skills" data-aos="fade-up">
+  <h2>Skills</h2>
 
-<h2>Contact</h2>
+  <div class="skills-list">
+    <div class="skill">React JS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">HTML5</div>
+    <div class="skill">CSS3</div>
+    <div class="skill">Python</div>
+    <div class="skill">Firebase</div>
+    <div class="skill">SEO</div>
+    <div class="skill">Google Ads</div>
+    <div class="skill">Website Hosting</div>
+    <div class="skill">Domain Management</div>
+    <div class="skill">GitHub</div>
+    <div class="skill">Responsive Design</div>
+  </div>
+</section>
 
-<p>
-<i class="fa-solid fa-envelope"></i>
-<a href="mailto:gokulakrishnan756@gmail.com">
-gokulakrishnan756@gmail.com
-</a>
-</p>
+<section id="services" data-aos="fade-up">
+  <h2>Services</h2>
 
-<p>
-<i class="fa-solid fa-phone"></i>
-+91 7418428599
-</p>
+  <div class="projects-grid">
+    <div class="project" data-aos="zoom-in">
+      <h3>Website Development</h3>
+      <p>Responsive websites using React, HTML, CSS and JavaScript.</p>
+    </div>
+    <div class="project" data-aos="zoom-in" data-aos-delay="100">
+      <h3>SEO Optimization</h3>
+      <p>Technical SEO, Local SEO and Route Page SEO.</p>
+    </div>
+    <div class="project" data-aos="zoom-in" data-aos-delay="200">
+      <h3>Google Ads</h3>
+      <p>Lead generation campaigns for local businesses.</p>
+    </div>
+    <div class="project" data-aos="zoom-in" data-aos-delay="300">
+      <h3>Hosting Management</h3>
+      <p>Domain setup, SSL, deployment and maintenance.</p>
+    </div>
+  </div>
+</section>
 
-<p>
-<i class="fa-brands fa-github"></i>
-<a href="https://github.com/Gokulakrishnan-maker" target="_blank">
-GitHub Profile
-</a>
-</p>
+<section id="projects" class="projects" data-aos="fade-up">
+  <h2>Featured Projects</h2>
 
-<p>
-<i class="fa-brands fa-linkedin"></i>
-<a href="https://www.linkedin.com/in/gokula-krishnan-v-331bbb185" target="_blank">
-LinkedIn Profile
-</a>
-</p>
+  <div class="projects-grid">
+    <div class="project" data-aos="zoom-in">
+      <h3>Care Drop Taxi</h3>
+      <p>Taxi booking website with route pages, fare calculator and SEO optimization.</p>
+    </div>
+    <div class="project" data-aos="zoom-in" data-aos-delay="100">
+      <h3>Red Wings Drop Taxi</h3>
+      <p>One-way taxi platform with Google Ads lead generation and WhatsApp booking.</p>
+    </div>
+    <div class="project" data-aos="zoom-in" data-aos-delay="200">
+      <h3>Oneway Drop Taxi 247</h3>
+      <p>React-based taxi booking website with dynamic fare calculation.</p>
+    </div>
+  </div>
+</section>
 
+<section id="contact" class="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+
+  <p>
+    <i class="fa-solid fa-envelope"></i>
+    <a href="mailto:gokulakrishnan756@gmail.com">gokulakrishnan756@gmail.com</a>
+  </p>
+  <p>
+    <i class="fa-solid fa-phone"></i>
+    +91 7418428599
+  </p>
+  <p>
+    <i class="fa-brands fa-github"></i>
+    <a href="https://github.com/Gokulakrishnan-maker" target="_blank">GitHub Profile</a>
+  </p>
+  <p>
+    <i class="fa-brands fa-linkedin"></i>
+    <a href="https://www.linkedin.com/in/gokula-krishnan-v-331bbb185" target="_blank">LinkedIn Profile</a>
+  </p>
 </section>
 
 <button id="backToTop">
-<i class="fa-solid fa-arrow-up"></i>
+  <i class="fa-solid fa-arrow-up"></i>
 </button>
 
-<!-- Improvement 7: WhatsApp Floating Button -->
-<a href="https://wa.me/917418428599" class="whatsapp-btn" target="_blank">
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/917418428599" target="_blank" class="whatsapp-btn">
   <i class="fab fa-whatsapp"></i>
 </a>
 
-<!-- Improvement 6: Better Footer -->
 <footer>
   <p>
     Built with ❤️ by Gokula Krishnan |
     React Developer • SEO Specialist • Google Ads Expert
   </p>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ duration: 1000, once: true });</script>
 
 </body>
 </html>
